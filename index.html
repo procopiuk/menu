@@ -3,32 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Menu - Meu Site</title> <!-- Título mais específico -->
+    <link rel="stylesheet" href="style.css"> <!-- Caso tenha um arquivo CSS externo -->
     <style>
-        a{
+        /* Resetando estilos básicos */
+        body, h1, ul, li, a {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4; /* Cor de fundo mais clara */
+            color: #333; /* Cor do texto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        header {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 2em;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        li {
+            margin: 1em 0;
+        }
+
+        a {
             text-decoration: none;
-            color:black;
-            text-align: center;
-            line-height: 2em;
+            color: black;
             font-size: 24px;
-        }
-        ul{
-            text-align: center;
-            padding-top:3em;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
+        a:hover {
+            background-color: #333;
+            color: #fff;
+        }
 
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.5em;
+            }
+
+            a {
+                font-size: 20px;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>menu</header>
+    <header>Menu</header>
     <ul>
-        <li><a href="menu1.html">menu simples </a></li>
-        <li><a href="menu2.html">menu fixado</a></li>
-        <li><a href="menu3.html">menu lateral</a></li>
-        <li><a href="menu4.html">menu livre</a></li>
+        <li><a href="menu1.html">Menu Simples</a></li>
+        <li><a href="menu2.html">Menu Fixado</a></li>
+        <li><a href="menu3.html">Menu Lateral</a></li>
+        <li><a href="menu4.html">Menu Livre</a></li>
     </ul>
-    
 </body>
 </html>
