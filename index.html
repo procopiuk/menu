@@ -3,32 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu com Botões</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        a{
-            text-decoration: none;
-            color:black;
-            text-align: center;
-            line-height: 2em;
+        /* Estilos para os botões */
+        button {
+            background-color: #4CAF50; /* Cor de fundo */
+            color: white; /* Cor do texto */
             font-size: 24px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
         }
-        ul{
+
+        button:hover {
+            background-color: #45a049; /* Cor ao passar o mouse */
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        header {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 2em;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
             text-align: center;
-            padding-top:3em;
         }
 
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.5em;
+            }
 
+            button {
+                font-size: 20px;
+                width: 180px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>menu</header>
+    <header>Menu</header>
     <ul>
-        <li><a href="menu1.html">menu simples </a></li>
-        <li><a href="menu2.html">menu fixado</a></li>
-        <li><a href="menu3.html">menu lateral</a></li>
-        <li><a href="menu4.html">menu livre</a></li>
+        <li><button onclick="window.location.href='menu1.html'">Menu Simples</button></li>
+        <li><button onclick="window.location.href='menu2.html'">Menu Fixado</button></li>
+        <li><button onclick="window.location.href='menu3.html'">Menu Lateral</button></li>
+        <li><button onclick="window.location.href='menu4.html'">Menu Livre</button></li>
     </ul>
-    
 </body>
 </html>
