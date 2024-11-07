@@ -3,36 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu de Navegação</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        li{
-            display: inline;
-            padding-right: 30px;
+        /* Reset de margens e padding para garantir consistência */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        a{
+
+        /* Cor de fundo e estilo geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para o menu */
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: scale(1.1);
+        }
+
+        a {
             text-decoration: none;
-            color: rgb(93, 120, 95);
-            text-align: center;
-            line-height: 2em;
+            color: #4CAF50;
             font-size: 24px;
-        }
-        ul{
-            text-align: center;
-            padding-top:3em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
         }
 
+        a:hover {
+            background-color: #4CAF50;
+            color: #fff;
+        }
 
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            li {
+                margin-right: 20px;
+            }
+
+            a {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+
+            header {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>menu</header>
+    <header>Menu de Navegação</header>
     <ul>
-        <li><a href="menu1.html">menu simples </a></li>
-        <li><a href="menu2.html">menu fixado</a></li>
-        <li><a href="menu3.html">menu lateral</a></li>
-        <li><a href="menu4.html">menu livre</a></li>
+        <li><a href="menu1.html">Menu Simples</a></li>
+        <li><a href="menu2.html">Menu Fixado</a></li>
+        <li><a href="menu3.html">Menu Lateral</a></li>
+        <li><a href="menu4.html">Menu Livre</a></li>
     </ul>
-    
 </body>
 </html>
