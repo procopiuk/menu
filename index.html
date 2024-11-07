@@ -13,37 +13,56 @@
             box-sizing: border-box;
         }
 
-        /* Cor de fundo e estilo geral */
+        /* Estilo do Body */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
             color: #333;
-            padding: 20px;
-            height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho fixo */
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Corpo da página (ajustar com espaço para o cabeçalho fixo) */
+        .content {
+            padding-top: 80px; /* Espaço suficiente para o cabeçalho fixo */
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
         }
 
-        /* Cabeçalho */
-        header {
-            text-align: center;
-            font-size: 36px;
-            font-weight: bold;
-            color: #4CAF50;
-            margin-bottom: 30px;
-        }
-
-        /* Estilo para o menu */
+        /* Estilo do menu */
         ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
             text-align: center;
         }
 
         li {
-            display: inline-block;
-            margin-right: 40px;
+            margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
 
@@ -53,45 +72,52 @@
 
         a {
             text-decoration: none;
-            color: #4CAF50;
+            color: #fff;
+            background-color: #4CAF50;
             font-size: 24px;
             font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s, color 0.3s;
         }
 
         a:hover {
-            background-color: #4CAF50;
+            background-color: #45a049;
             color: #fff;
         }
 
         /* Responsividade para telas menores */
         @media (max-width: 600px) {
-            li {
-                margin-right: 20px;
+            header h1 {
+                font-size: 24px;
             }
 
             a {
-                font-size: 20px;
-                padding: 8px 15px;
+                font-size: 18px;
+                padding: 10px 20px;
             }
 
-            header {
-                font-size: 28px;
+            li {
+                margin-bottom: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <header>Menu de Navegação</header>
-    <ul>
-        <li><a href="menu1.html">Menu Simples</a></li>
-        <li><a href="menu2.html">Menu Fixado</a></li>
-        <li><a href="menu3.html">Menu Lateral</a></li>
-        <li><a href="menu4.html">Menu Livre</a></li>
-    </ul>
+    <!-- Cabeçalho fixo -->
+    <header>
+        <h1>Menu de Navegação</h1>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <div class="content">
+        <ul>
+            <li><a href="menu1.html">Menu Simples</a></li>
+            <li><a href="menu2.html">Menu Fixado</a></li>
+            <li><a href="menu3.html">Menu Lateral</a></li>
+            <li><a href="menu4.html">Menu Livre</a></li>
+        </ul>
+    </div>
 </body>
 </html>
